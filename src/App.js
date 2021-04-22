@@ -4,6 +4,7 @@ import JobDetail from "./components/JobDetail.js";
 import JobsList from "./components/JobsList.js";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+// import ProtectedRoute from "./components/ProtectedRoute";
 import FourthOhFourthPage from "./pages/404Page";
 import "./App.css";
 
@@ -17,6 +18,10 @@ function App() {
         <Route path="/jobs" exact component={JobsList} />
         <Route path="/jobs/:id" component={JobDetail} />
         <Route path="/" component={FourthOhFourthPage} />
+        {/* <ProtectedRoute
+          path="/job/:id"
+          render={(props) => <Details {...props} />}
+        /> */}
       </Switch>
     </div>
   );
